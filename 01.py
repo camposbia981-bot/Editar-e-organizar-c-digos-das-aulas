@@ -10,15 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
     <style>
-        .oswald-<uniquifier> {
-            font-family: "Oswald", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: <weight>;
-            font-style: normal;
-        }
-
         body { 
-            background-color: gray;
+            background-color: black;
             font-family: Arial, sans-serif;
         }
 
@@ -29,9 +22,8 @@
         }
 
         h2 {
-            color: white;
+            color: pink;
             text-align: center;
-            font-family: 'Oswald', sans-serif;
         }
 
         div {
