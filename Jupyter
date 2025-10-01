@@ -1,0 +1,202 @@
+
+Revisão de Programação em Python
+Alunos da Rede Pública Municipal de Santana de Parnaíba inscritos na Fábrica de Programadores!
+Neste notebook, vamos revisar os conceitos aprendidos:
+
+Variáveis e tipos básicos 😁
+Listas 📋
+Estruturas condicionais (if, elif, else) ⬅️➡️
+Casting 🫠
+Funções 📐
+Escopo (global, local) 🌍🏠
+Composição ➗
+Loops (while, for) 🌀
+Lógica básica de programação 🧠
+Responda todos os exercícios utilizando composição!
+
+Exercício 1: Variáveis e Tipos Básicos
+# 1. Declare variáveis para armazenar:
+#    - Seu nome (string)
+#    - Sua idade (int)
+#    - Sua altura em metros (float)
+#    - Se você gosta de programar (True, False)
+#    - Depois, imprima cada uma dessas variáveis
+
+# Seu código aqui
+
+nome="Bia"
+idade=20
+altura=1.10
+gosta_de_programar=True
+
+print(nome)
+print(idade)
+print(altura)
+print("gosta_de_programar")
+Bia
+20
+1.1
+gosta_de_programar
+Exercício 2: Operações com Listas
+# 2. Declare uma lista chamada 'frutas' com 5 frutas diferentes
+#    - Adicione uma nova fruta no final da lista
+#    - Remova a segunda fruta da lista
+#    - Imprima a lista resultante
+#    - Imprima apenas a terceira fruta da lista
+
+# Seu código aqui
+
+frutas=["maçã","banana","laranja","uva","pera"]
+frutas.append(["melão"])
+frutas.pop(1)
+print(frutas)
+print(frutas[2])
+    
+['maçã', 'laranja', 'uva', 'pera', ['melão']]
+uva
+Exercício 3: Funções, Escopo e Tipos de Dados
+# 3. Defina uma função chamada calcular_dobro que recebe um número inteiro como parâmetro.
+#    - Dentro da função, calcule o dobro desse número e atribua o resultado a uma variável local chamada resultado_dobro.
+#    - A função deve retornar resultado_dobro.
+#    - Fora da função, invoque a função com o número 7 e atribua o valor retornado a uma variável global chamada meu_dobro.
+#    - Imprima o valor de meu_dobro.
+
+# Seu código aqui
+  Cell In[44], line 10
+    return resultado_dobro=calcular_dobro(7)
+                          ^
+SyntaxError: invalid syntax
+Exercício 4: Estruturas Condicionais (if, else)
+# 4. Crie um programa que verifica se um número é positivo, negativo ou zero
+#    - Peça para o usuário digitar um número
+#    - Use if, elif e else para verificar o número
+#    - Imprima o resultado
+
+# Seu código aqui
+numero=int(input("Digite um numero:"))
+if numero >=0:
+    print("positivo")
+elif numero <=0:
+    print("Negativo")
+else:
+    print("Zero")
+positivo
+Exercício 5: Loop While
+# 5. Crie um contador regressivo de 5 até 1 usando while
+#    - A cada iteração, imprima o número atual
+#    - Quando chegar a 1, imprima "Fogo!"
+
+# Seu código aqui
+x=5
+while x >=1:
+    print(x)
+    x=x - 1
+print("Fogo!")
+5
+4
+3
+2
+1
+Fogo!
+Exercício 6: Loop For
+# 6. Crie um programa que calcula a média de 5 notas usando for
+#    - Peça para o usuário digitar 5 notas
+#    - Use um loop for para somar as notas
+#    - Calcule e imprima a média
+
+# Seu código aqui
+Exercício 7: Escopo Global e Local
+# 7. Defina uma variável global chamada saldo_inicial com o valor 1000.50 (tipo float).
+#    - Crie uma função chamada depositar que recebe um valor_deposito (float) como parâmetro.
+#    - Dentro da função depositar, adicione o valor_deposito ao saldo_inicial. Lembre-se de usar a palavra-chave global para modificar a variável global.
+#    - Fora da função, chame depositar com o valor 250.75.
+#    - Após a chamada da função, imprima o valor atualizado de saldo_inicial.
+
+# Seu código aqui
+saldo_inicial=1000.50
+def depositar(valor_deposito):
+    global saldo_inicial
+    saldo=saldo_inicial+valor_deposito
+depositar(250.75)
+print(saldo_inicial)
+    
+1000.5
+ 
+Exercício 8: Listas e Loops
+# 8. Crie uma lista de números de 1 a 10
+#    - Use um loop for para imprimir apenas os números pares
+#    - Depois, crie uma nova lista com os números ímpares
+#    - Imprima a lista de ímpares
+
+# Seu código aqui
+
+pares=[1,10]
+for B in numeros:
+    if B %2==0:
+        pares.append(B)
+    
+
+impares=[1,10]
+for B in numeros:
+    if B %2==3:
+        impares.append(B)
+        print(impares)
+Exercício 9: Jogo de Adivinhação
+# 9. Crie um jogo de adivinhação onde:
+#    - O computador escolhe um número aleatório entre 1 e 10
+#    - O jogador tem 3 tentativas para adivinhar o número
+#    - A cada tentativa, diga se o palpite é maior ou menor que o número secreto
+#    - Se acertar, imprima "Parabéns!" e encerre o jogo
+#    - Se errar todas as tentativas, imprima o número correto
+
+# Seu código aqui
+Exercício 10: Desafio Final
+# 10. Crie um programa que:
+#    - Pede para o usuário digitar o seu próprio peso em Kgs.
+#    - Depois, pede ao usuário que digite sua altura em metros.
+#    - Em terceiro, pede ao usuário que digite seu nome e idade.
+#    - Adiciona os dados digitados ao final de uma lista (utilizando a função .append()).
+#    - Calcule o índice de massa corpórea (IMC) do indivíduo de acordo com a fórmula do IMC pesquisada.    
+#    - Após calcular, registre: Classificação do IMC de acordo com a OMS:
+#    - < 16         Magreza grave (grau III)
+#    - 16 a 16,9    Magreza moderada (grau II)
+#    - 17 a 18,4    Magreza leve (grau I)
+#    - 18,5 a 24,9  Eutrofia (estado nutricional adequado)
+#    - 25 a 29,9    Pré-obesidade
+#    - 30 a 34,9    Obesidade moderada (grau I)
+#    - 35 a 39,9    Obesidade severa (grau II)
+#    - >= 40        Obesidade muito severa (grau III)
+#    - Finalmente, em ordem alfabética (utilizando a função .sort()), exiba todos os itens da lista ao lado de seus dados, seu IMC e sua respectiva classificação.
+
+# Seu código aqui
+peso=int(input("Digite seu peso"))
+altura=int(input("Digite sua altura"))
+nome=input("Digite seu nome")
+idade=int(input("Digite sua idade"))
+
+dados.append([peso,altura,nome,idade])
+imc=int(input(peso/altura*altura))
+
+
+if peso ==16:
+    print("Magreza grave"(grau 3))
+elif peso 16 <= imc <= 16,9:
+    print("Magreza moderada"(grau2))
+elif peso  17 <= imc <= 18,4:
+    print("Magreza leve"(grau 1))
+elif peso 18,5 <= imc <= 24,9:
+    print("Eutrofia"(Estado nutricional adequado))
+elif peso 25 <= imc <= 29,9:
+    print("Pré-obesidade")
+elif peso 30 <= imc <= 4,9:
+    print("Obesidade moderada"(grau 1))
+elif peso  35<= imc 39,9:
+    print("Obesidade severa"(grau 2))
+else peso <=40:
+    print("Obesidade muito severa"(grau3))
+  Cell In[53], line 30
+    elif peso 16 <= imc <= 16,9:
+              ^
+SyntaxError: invalid syntax
+Parabéns por completar os exercícios! 🥳
+Continue praticando e explorando os conceitos de programação.
