@@ -1,0 +1,11 @@
+from classe_pai import Animal
+
+class Gato(Animal):
+
+    def miando(self):
+        print(f"miando")
+
+    def fazer_som(self):
+        print(f"{self.nome} está miando: Miau!")
+
+    
