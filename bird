@@ -1,0 +1,42 @@
+class Pássaro():
+    
+    def __init__(self, tamanho, cores, espécie, sexo):
+        self.tamanho = tamanho
+        self.cores = cores
+        self.espécie = espécie
+        self.sexo = sexo
+
+    def cantar(self):
+        return print(f'Sou uma {self.espécie} cantando uma bela canção')
+    
+    def voar(self):
+        return print('Batendo as asas e: voando... ')
+    
+pássaro1 = Pássaro(0.14, ['Marrom', 'Branco', 'Cinza'], 'Pardal' , 'M', )
+pássaro1.cantar()
+
+def cantar(self):
+    return print(f'Sou um corvo {self.espécie} cantando uma bela canção')
+
+def voar (self):
+    return print(f'Batendo as asas e: voando...')
+
+pássaro2 = Pássaro(70,['Preto'], 'Corvo' , 'M')
+pássaro2.cantar()
+
+def cantar(self):
+    return print(f'Sou um  Pombo {self.espécie} cantando uma bela canção')
+
+def voar(self):
+    return print(f'Batendo as asas e: voando...')
+
+pássaro3 = Pássaro(32,['Cinza', 'Branco', 'Preto'], 'Pombo', 'M')
+pássaro3.voar()
+
+def cantar(self):
+    return print(f' Sou uma arara {self.espécie} cantando uma bela canção')
+
+def voar(self):
+    return print(f'Batendo as asas e:voando...' )
+
+pássaro4 = Pássaro(00,['Laranja', 'Amarelo', 'Verde'], 'Arara', 'M')
