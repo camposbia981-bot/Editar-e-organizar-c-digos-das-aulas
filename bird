@@ -1,42 +1,41 @@
-class Pássaro():
-    
-    def __init__(self, tamanho, cores, espécie, sexo):
-        self.tamanho = tamanho
+class AnimaisMarinhos:
+    def __init__(self, cores, especie, nome, sexo):
         self.cores = cores
-        self.espécie = espécie
-        self.sexo = sexo
+        self.especie = especie
+        self.nome = nome
+        self.sexo = sexo  # 'M' ou 'F'
+
+    def _artigo(self):
+        return 'uma' if self.sexo == 'F' else 'um'
+
+    def dancar(self):
+        artigo = self._artigo()
+        print(f'Sou {artigo} {self.especie} dançando')
 
     def cantar(self):
-        return print(f'Sou uma {self.espécie} cantando uma bela canção')
-    
-    def voar(self):
-        return print('Batendo as asas e: voando... ')
-    
-pássaro1 = Pássaro(0.14, ['Marrom', 'Branco', 'Cinza'], 'Pardal' , 'M', )
-pássaro1.cantar()
+        artigo = self._artigo()
+        print(f'Sou {artigo} {self.especie} cantando')
 
-def cantar(self):
-    return print(f'Sou um corvo {self.espécie} cantando uma bela canção')
+    def nadar(self):
+        artigo = self._artigo()
+        print(f'Sou {artigo} {self.especie} nadando')
 
-def voar (self):
-    return print(f'Batendo as asas e: voando...')
+    def viver(self):
+        artigo = self._artigo()
+        print(f'Sou {artigo} {self.especie} vivendo')
 
-pássaro2 = Pássaro(70,['Preto'], 'Corvo' , 'M')
-pássaro2.cantar()
+    def brincar(self):
+        artigo = self._artigo()
+        print(f'Sou {artigo} {self.especie} brincando')
 
-def cantar(self):
-    return print(f'Sou um  Pombo {self.espécie} cantando uma bela canção')
 
-def voar(self):
-    return print(f'Batendo as asas e: voando...')
-
-pássaro3 = Pássaro(32,['Cinza', 'Branco', 'Preto'], 'Pombo', 'M')
-pássaro3.voar()
-
-def cantar(self):
-    return print(f' Sou uma arara {self.espécie} cantando uma bela canção')
-
-def voar(self):
-    return print(f'Batendo as asas e:voando...' )
-
-pássaro4 = Pássaro(00,['Laranja', 'Amarelo', 'Verde'], 'Arara', 'M')
+animal1 = AnimaisMarinhos(['azul'], 'peixe', 'Peixinho', 'M')
+animal2 = AnimaisMarinhos(['verde'], 'tubarão', 'Martelo', 'M')
+animal3 = AnimaisMarinhos(['azul'], 'baleia', 'Baleia', 'F')
+animal4 = AnimaisMarinhos(['preto'], 'orca', 'Orca', 'F')
+animal5 = AnimaisMarinhos(['rosa'], 'tubarão', 'Tubarão', 'M')
+animal1.dancar()
+animal2.cantar()
+animal3.nadar()
+animal4.viver()
+animal5.brincar()
