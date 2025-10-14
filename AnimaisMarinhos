@@ -1,0 +1,34 @@
+class Animaismarinhos():
+    
+    def __init__(self, cores, especie, nome, sexo):    
+        self.cores = cores
+        self.especie = especie
+        self.nome = nome
+        self.sexo = sexo
+
+    def dançar(self):
+        print(f"Sou um {self.especie} dançando uma dança")
+
+    def cantar(self):
+        print(f"Sou um {self.especie} cantando feliz")
+
+    def parar(self):
+        print(f"Sou uma {self.especie} parada")
+
+    def brincar(self):
+        print(f"Sou um {self.especie} brincando")
+
+    def viver(self):
+        print(f"Sou uma {self.especie} Vivendo feliz")
+        
+
+animal1 = Animaismarinhos(['azul'], 'peixe', 'peixe', 'M')
+animal1.dançar()
+animal2 = Animaismarinhos(['verde'], 'tubarão','martelo', "M")
+animal2.cantar()
+animal3 = Animaismarinhos(['azul'], 'estrela do mar', 'estrela','M')
+animal3.parar()
+animal4 = Animaismarinhos(['preto'],'baleia','orca','M') 
+animal4.viver()
+animal5 = Animaismarinhos(['rosa'],'tubarão','tubarão','M')
+animal5.brincar()
