@@ -1,3 +1,8 @@
+class Mídia:
+    def __init__ (self, título:str, artista:str):
+        self.titulo = título
+        self.artista = artista
+
 class Musica(Mídia):
     def __repr__(self):
         return f" ' {self.titulo}' por {self.artista}"
