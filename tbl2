@@ -22,3 +22,31 @@ try:
         id_item INT PRIMARY KEY,
         nome VARCHAR(50),
         tipo VARCHAR(30)
+    )""")
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS ambiente (
+        id_ambiente INT PRIMARY KEY,
+        local VARCHAR(50),
+        descricao VARCHAR(100)
+    )""")
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS jogo (
+        id_jogo INT PRIMARY KEY,
+        nome VARCHAR(50),
+        tema VARCHAR(30)
+    )""")
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS objetivo (
+        id_objetivo INT PRIMARY KEY,
+        descricao VARCHAR(100)
+    )""")
+
+    conexao.commit()
+    print("Tabelas criadas com sucesso!")
+
+except sqlite3.Error as erro:
+    print("Erro ao criar o banco:", erro)
+
+finally:
+    if conexao:
+        conexao.close()
