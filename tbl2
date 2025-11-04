@@ -1,56 +1,24 @@
 import sqlite3
 
-con = sqlite3.connect("invocacao_do_mal.db")
-cur = con.cursor()
+try:
+    conexao = sqlite3.connect("invecao_do_mal.db")
+    cursor = conexao.cursor()
 
-cur.execute("""
-CREATE TABLE jogadores(
-id_jogador INTEGER PRIMARY KEY AUTOINCREMENT,
-nome VARCHAR(50),
-idade INT,
-email VARCHAR(100)
-)
-""")
+    cursor.execute("""CREATE TABLE IF NOT EXISTS jogadores (
+        id_jogador INT PRIMARY KEY,
+        nome VARCHAR(50),
+        idade INT,
+        email VARCHAR(100)
+    )""")
 
-cur.execute("""
-CREATE TABLE personagens(
-id_personagem INTEGER PRIMARY KEY AUTOINCREMENT,
-nome VARCHAR(50),
-id_jogador INT,
-idade INT
-)
-""")
+    cursor.execute("""CREATE TABLE IF NOT EXISTS personagens (
+        id_personagem INT PRIMARY KEY,
+        nome VARCHAR(50),
+        id_jogador INT,
+        idade INT
+    )""")
 
-cur.execute("""
-CREATE TABLE itens(
-id_item INTEGER PRIMARY KEY AUTOINCREMENT,
-nome VARCHAR(50),
-tipo VARCHAR(30)
-)
-""")
-
-cur.execute("""
-CREATE TABLE ambiente(
-id_ambiente INTEGER PRIMARY KEY AUTOINCREMENT,
-local VARCHAR(50),
-descricao VARCHAR(100)
-)
-""")
-
-cur.execute("""
-CREATE TABLE jogo(
-id_jogo INTEGER PRIMARY KEY AUTOINCREMENT,
-nome VARCHAR(50),
-tema VARCHAR(30)
-)
-""")
-
-cur.execute("""
-CREATE TABLE objetivo(
-id_objetivo INTEGER PRIMARY KEY AUTOINCREMENT,
-descricao VARCHAR(100)
-)
-""")
-
-con.commit()
-con.close()
+    cursor.execute("""CREATE TABLE IF NOT EXISTS itens (
+        id_item INT PRIMARY KEY,
+        nome VARCHAR(50),
+        tipo VARCHAR(30)
